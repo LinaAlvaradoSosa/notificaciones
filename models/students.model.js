@@ -15,6 +15,9 @@ status: {
     enum: ["active", "pending", "suspended"],
     default: "active"
 },
+phone: {
+    type:String
+},
 paymentsPending:[ 
     {
         type:{
