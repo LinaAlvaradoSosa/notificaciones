@@ -25,9 +25,10 @@ const transporter = nodemailer.createTransport({
     }
 })
 
+
 // tener en cuenta que al subirlo a AWS la zona horaria va a cambiar 
 
-cron.schedule("32 10 * * * ", async () => {
+cron.schedule("39 16 * * *", async () => {
     try {
         console.log("Enviando notificaciones automáticas...");
         const students = await Student.find({ "paymentsPending.0": { $exists: true } }); 

@@ -2,7 +2,7 @@ import express from "express";
 import { connectDB } from "./config/DB.js";
 import routerStudents from "./routes/students.routes.js";
 import routerNotification from "./routes/notifications.routes.js";
-
+import cron from "./utils/notification.js"
 
 
 const app = express();
