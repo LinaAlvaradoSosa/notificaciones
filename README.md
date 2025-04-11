@@ -1,3 +1,4 @@
 Este es un proyecto
-![Mi logo](./imgs/MensajesAutomaticos)
+![Mensajes auntomaticos a Estudiantes](imgs/MensajesAutomaticos.png)
+
 
