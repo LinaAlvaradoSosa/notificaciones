@@ -1,10 +1,10 @@
 import mongoose from "mongoose";
+import { schedule } from "node-cron";
 
 
 const studentScherma = new mongoose.Schema({
 name: {
     type: String,
-    required: true
 }, 
 email: {
     type: String,
@@ -15,18 +15,19 @@ status: {
     enum: ["active", "pending", "suspended"],
     default: "active"
 },
-phone: {
-    type:String
-},
 paymentsPending:[ 
     {
-        type:{
-            type: String,
-            enum: ["request", "payment", "none"],
-            required: true
-    }
-},
+        type: String,
+        enum: ["request", "payment", "none"],
+        required: true
+    },
 ], 
+schedule: {
+    type: String
+},
+message: {
+    type: String
+},
 notifications: [{
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Notification'

@@ -3,7 +3,7 @@ import { configDotenv } from "dotenv";
 configDotenv();
 
 export async function connectDB() {
-    const link = `mongodb+srv://${process.env.USER_DB}:${process.env.PASS_DB}@${process.env.LINK_DB}/Notificaciones?retryWrites=true&w=majority`
+    const link = process.env.LINK_DB
     try {
         await mongoose.connect(link)
         console.log('conectado a la base de datos');

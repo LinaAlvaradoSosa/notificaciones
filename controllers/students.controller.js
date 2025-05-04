@@ -1,9 +1,9 @@
 import Student from "../models/students.model.js";
 
 export async function createStudent(req, res) {
-    const { name, email } = req.body;
+    const { schedule, email } = req.body;
     try {
-        if (!name) return res.send('Student name is required');
+        if (!schedule) return res.send('please! chose a schedule');
         if (!email) return res.send('email is required')
         
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // expresiones regulares
