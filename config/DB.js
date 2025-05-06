@@ -3,7 +3,7 @@ import { configDotenv } from "dotenv";
 configDotenv();
 
 export async function connectDB() {
-    const link = process.env.LINK_DB
+    const link = process.env.MONGO_URI
     try {
         await mongoose.connect(link)
         console.log('conectado a la base de datos');
